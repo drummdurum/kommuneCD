@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+
+<body>
+
+<div id="outer">
+    <div id="div1" class="my-div">Div 1</div>
+    <div id="div2" class="my-div">Div 2</div>
+    <div id="div3" class="my-div">Div 3</div>
+    <div id="div4" class="my-div">Div 4</div>
+    <div id="div5" class="my-div">Div 5</div>
+    <div id="div6" class="my-div">Div 6</div>
+    <div id="div7" class="my-div">Div 7</div>
+    <div id="div8" class="my-div">Div 8</div>
+    <div id="div9" class="my-div">Div 9</div>
+    <div id="div10" class="my-div">Div 10</div>
+    <div id="div11" class="my-div">Div 11</div>
+    <div id="div12" class="my-div">Div 12</div>
+    <div id="div13" class="my-div">Div 13</div>
+</div>
+
+
+<script>
+
+    // e elemenet i funktionen er endelig den info hvor der bliver clicket, den info bliver gemt i e.target.
+    // så e.target er den præcisige værdi eller hvilket nr div.
+    document.getElementById("outer").addEventListener("click",function (e){
+        const target = e.target;
+
+        if(target && target.classList.contains("my-div")){
+            document.getElementById("outer").innerText = "hej fra "+ target.id;
+        }
+    });
+
+
+</script>
+</body>
+</html>

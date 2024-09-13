@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test igen</title>
+    <style>
+        .my-div {width: 25px; height: 25px;background-color:red; margin:1px;}
+    </style>
+
+</head>
+<body>
+    <div class="my-div" id = "testKnap"> hej</div>
+    <div class="my-div" id = "testKnap1"> hallo</div>
+    <div class="div1" id = "testKnap2"> hallo</div>
+    <button class="styled-button" id="button">skriv noget i control</button>
+
+    <script>
+        const divs = document.querySelectorAll(".my-div");
+
+        // Tilføj en click event handler til hvert div-element
+        divs.forEach(function(div) {
+            div.addEventListener("click", function() {
+                // Log meddelelse i konsollen
+                console.log("Hi from " + div.id);
+            });
+        });
+
+        // Hent div-elementet
+        const divElement = document.getElementById("testKnap2");
+
+        // Tilføj en mouseover-hændelseslytter
+        divElement.addEventListener("mouseover", function() {
+            // Denne kode kører, når musen kører hen over div-elementet
+            console.log("Musen er over div'en!");
+        });
+
+
+    </script>
+
+
+</body>
+</html>

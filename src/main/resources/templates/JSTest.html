@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test test test</title>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                margin: 1px;
+            }
+             .styled-button {
+                 background-color: #4CAF50; /* Grøn farve */
+                 border: none; /* Fjern kant */
+                 color: white; /* Hvid tekst */
+                 padding: 15px 32px; /* Indvendig afstand */
+                 text-align: center; /* Centreret tekst */
+                 text-decoration: none; /* Ingen understregning */
+                 display: inline-block; /* Inline blok element */
+                 font-size: 16px; /* Skriftstørrelse */
+                 margin: 4px 2px; /* Ydre afstand */
+                 cursor: pointer; /* Pointer ved hover */
+                 border-radius: 12px; /* Runde hjørner */
+                 transition: background-color 0.3s ease; /* Glat overgang ved hover */
+             }
+
+            .styled-button:hover {
+                background-color: #45a049; /* Mørkere grøn ved hover */
+            }
+        </style>
+
+</head>
+<body>
+
+<div id="div1">&nbsp;</div>
+<div id="div2">&nbsp;</div>
+<div id="div3">&nbsp;</div>
+
+<button class="styled-button" id="button">Skift farve</button>
+
+<script>
+    window.onload = function (){
+        const divs = document.querySelectorAll("div");
+        const colors = ["red","blue","green"]
+
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].style.background = colors[i];
+        }
+
+    function changeColor() {
+        const newColor = ["yellow", "pink", "cayn"]
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].style.background = newColor[i];
+
+        }
+    }
+
+        document.getElementById("button").onclick = changeColor;
+
+    }
+</script>
+
+
+</body>
+</html>
